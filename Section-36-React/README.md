@@ -71,3 +71,22 @@ JSX
 ```
 
 Similarly we can use all the attributes associated with html elements inside JSX. But if the attribute has name combined using two words like `contenteditable` or `spellcheck` should be written in `camelCase` as `contentEditable`, `spellCheck` etc inside JSX.
+
+## JSX Inline Styling
+
+In HTML, inline styling can be done using `style` attribute, Similarly with the help of same style attribute we can add inline css inside jsx. However value of style attribute in JSX should be an **javascript object**.
+
+> Note: The property name should be in Camel Case if we are using inline styling. Eg: font-size -> fontSize; font-weight -> fontWeight etc.
+
+```
+var customStyle = {
+    color: "orange",
+    fontSize: "2rem", // Unlike css we can directly use numbers, here we have to use strings even for numbers
+    fontWeight: "bold"
+}
+<h1 style={customStyle}>Good Morning</h1> // Since we are adding javascript expression inside JSX we have to include in `{}` braces
+
+or
+
+<h1 style={{color:"red", fontSize:"2rem", fontWeight:"bold"}}>Good Morning</h1>
+```
