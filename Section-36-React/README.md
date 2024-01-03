@@ -90,3 +90,32 @@ or
 
 <h1 style={{color:"red", fontSize:"2rem", fontWeight:"bold"}}>Good Morning</h1>
 ```
+
+## React Components
+
+One of the major feature of react is components and its reusability for different projects. We can define differnet functions for different react component. There could be component for Navbar, Searchbar, Heading, Image etc
+
+```
+// Heading Component (./Heading.jsx)
+function Heading() {
+    return <h1>Hello World</h1>
+}
+export default Heading; // We have to export the function in order to use it in another module
+
+//App Component which contains all the component the application is going to use (./App.jsx)
+import Heading from "./Heading";
+
+export default function App() {
+    <Heading />
+}
+
+./index.jsx
+import {createRoot} from "react-dom/client";
+
+const root = createRoot(document.getElementById("root"));
+root.render(
+    <App/>
+)
+```
+
+Similar to HTML elements we can use the components using its name tag(Mostly we will use self closing tag)!
