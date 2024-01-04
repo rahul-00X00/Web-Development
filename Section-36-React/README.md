@@ -16,7 +16,7 @@ import { createRoot } from "react-dom/client"; // It is new method from react-do
 import App from "./App"; // It is an another component we are attaching it here, one of the feature of react
 
 const rootElement = document.getElementById("root"); // Normal Vanilla JavaScript to find id having name 'root'
-const root = createRoot(rootElement); // Using createRoot() method we are specifying where we want to attach our react component
+const root = createRoot(rootElement); // Using createRoot() method we are specifying where we want to attach our main application react component
 
 root.render(
   <StrictMode>
@@ -26,7 +26,7 @@ root.render(
 ); // This method will render html content inside the root element
 ```
 
-JSX is a JavaScript XML using this we can write html like code in javascript file and the **react** - the first imported package will handle this JSX and in that package there is tool named `Babel`. What babel does is it converts this JSX and Modern JavaScript Code(ES6) into plain vanilla javascript so that every browser can understand it.
+JSX is a JavaScript XML using this we can write html like code in javascript file and the **react** package/module - the first imported package will handle this JSX and in that package there is tool named `Babel`. What babel does is it converts this JSX and Modern JavaScript Code(ES6) into plain vanilla javascript so that every browser can understand it.
 
 > Note: We can only render one html element, means we cannot render multiple html elements separately at once. For a single component there should be only one html element that can be rendered. However we can use `div` element to wrap multiple html elements into one.
 
@@ -70,11 +70,15 @@ JSX
 <h1 className='heading'>This is a Heading</h1>
 ```
 
-Similarly we can use all the attributes associated with html elements inside JSX. But if the attribute has name combined using two words like `contenteditable` or `spellcheck` should be written in `camelCase` as `contentEditable`, `spellCheck` etc inside JSX.
+Similarly we can use all the attributes associated with html elements inside JSX. But if the attribute has name combined using two words like `contenteditable` or `spellcheck` it should be written in `camelCase` as `contentEditable`, `spellCheck` etc inside JSX.
 
 ## JSX Inline Styling
 
 In HTML, inline styling can be done using `style` attribute, Similarly with the help of same style attribute we can add inline css inside jsx. However value of style attribute in JSX should be an **javascript object**.
+
+> [!NOTE]
+> Value of style attribute should be an **Javascript Object**
+> Eg: style={{color: 'red'}};
 
 > Note: The property name should be in Camel Case if we are using inline styling. Eg: font-size -> fontSize; font-weight -> fontWeight etc.
 
