@@ -123,3 +123,72 @@ root.render(
 ```
 
 Similar to HTML elements we can use the components using its name tag(Mostly we will use self closing tag)!
+
+## Javascript ES6 import and export keyword
+
+Here we have seen we have imported and exported react components, so in order to use another modules functionality or methods/attribute we have to use import keyword and if any functionality has to be made global so that it can be used inside different files we have to use export keyword.
+ES6 allows to use import and export modules and this makes componentization meaning we are breaking modules into different standalone, reusable, application.
+
+### Importing default
+
+```
+//math.js
+const PI = 3.1415962
+
+export default PI;
+
+
+// custom module
+import PI from "./math.js";
+
+console.log(PI); -> Output: 3.1415962
+```
+
+So in the above example we are exporting const PI value so that it can be used inside any other modules if imported.
+Now here we have use **default** keyword, it specifies that default thing which has to be exported.
+
+Since we have declared default thing(variable/method) we can use any word to address it out during importing
+Eg:
+import pi from "./math.js" or
+import pie from "./math.js" or
+import PI from "./math.js"
+All the above import function will work!
+
+### Importing multiple functions or variables/constant
+
+We can export more than one thing(variable/functions)
+
+```
+// math.js
+def Add(a, b) {
+    return a+b;
+}
+
+def Multiply(a,b) {
+    return a*b;
+}
+
+export {Add, Multiply}; // Note: We just have to use function name
+
+// custom module
+import {Add, Multiply} from "./math.js"
+
+console.log(Add(2,4)) -> Output: 6
+console.log(Multiply(2,3)) -> Output: 6
+```
+
+In this example we are exporting Add and Multiply functionality and we have specified the function names in curly braces. Now inside another module when we are importing these functionalities we have to use exact same name as it was defined. Unlike default we can't give random name!
+
+### Importing using `*` key
+
+We can also import everything from the modules using `*`(wild card or asterik) key. But with this we are losing single default importing. Using default and particular functions makes our code very precise with the things we actually want.
+
+Also when we use `*` we have to give it a name. For eg; `import * as mth`!
+
+```
+import * as mth from "./math.js";
+
+console.log(mth.default); //3.1415962
+console.log(mth.Add(2,4)); //6
+console.log(mth.Multiply(2,4)); //6
+```
