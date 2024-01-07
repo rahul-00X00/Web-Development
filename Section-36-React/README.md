@@ -192,3 +192,15 @@ console.log(mth.default); //3.1415962
 console.log(mth.Add(2,4)); //6
 console.log(mth.Multiply(2,4)); //6
 ```
+
+## React local environment setup
+
+To run react locally all we have to do is to run the following command inside terminal of the code editor
+
+> npx create-react-app my-app
+
+**Note**: Node should be installed.
+
+After the installation of all necessary react packages, change directory to the `my-app` directory and then we have to run the following command;
+
+> npm start
