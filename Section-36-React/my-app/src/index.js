@@ -1,5 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+// import App from "./App.jsx";
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+import Note from './Note.jsx';
+import "./styles.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<h1>Back to</h1>);
+const root = createRoot(document.getElementById("root"));
+root.render(
+  <StrictMode>
+    {/* <App /> */}
+    <Header />
+    <Note />
+    <Footer />
+  </StrictMode>
+)
