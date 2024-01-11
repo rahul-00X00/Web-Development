@@ -1,8 +1,8 @@
 body {
     margin: 0;
     background-color: whitesmoke;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-family: 'McLaren', sans-serif;
+    font-weight: 300;
 }
 
 footer {
@@ -18,8 +18,8 @@ footer {
     background-color: yellow;
     padding: 1rem;
     margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-family: 'McLaren', sans-serif;
+    font-weight: 400;
 }
 
 .note {
