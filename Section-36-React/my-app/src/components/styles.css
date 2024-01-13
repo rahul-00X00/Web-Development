@@ -20,6 +20,7 @@ footer {
     margin-top: 0;
     font-family: 'McLaren', sans-serif;
     font-weight: 400;
+    box-shadow: 5px 5px 20px white;
 }
 
 .note {
@@ -29,4 +30,11 @@ footer {
     font-size: 12px;
     margin: 1rem;
     padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: overflow 1s ease;
+}
+
+.note:hover {
+    overflow: auto;
 }

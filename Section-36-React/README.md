@@ -204,3 +204,7 @@ To run react locally all we have to do is to run the following command inside te
 After the installation of all necessary react packages, change directory to the `my-app` directory and then we have to run the following command;
 
 > npm start
+
+## React Props
+
+Just like we can give additional information to a html element using attributes similarly we can give additional information to custom components element which is known as props
