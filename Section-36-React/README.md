@@ -207,4 +207,71 @@ After the installation of all necessary react packages, change directory to the 
 
 ## React Props
 
-Just like we can give additional information to a html element using attributes similarly we can give additional information to custom components element which is known as props
+Just like we can give additional information to a html element using attributes, similarly we can give additional information to custom components element which is known as **props**
+
+Eg:
+
+```
+Generally what we do,
+
+//Cards.jsx
+function Cards() {
+  return (
+    <div>
+      <h1>Tony Stark</h1>
+      <img
+        src="image-source"
+        alt=""
+      />
+
+      <h1>Steve Roger</h1>
+      <img
+        src="image-source"
+        alt=""
+      />
+
+      <h1>Peter Parker</h1>
+      <img
+        src="image-source"
+        alt=""
+      />
+    </div>
+  );
+}
+
+export default Cards;
+
+//Apps.jsx
+import Cards from "./Cards.jsx"
+
+class App() {
+    <Cards />
+}
+
+export default App;
+```
+
+Here in the above example we have repeatedly used same layout for multiple fictional characters. This can be avoided using react props where we just have to pass data to the component and the content is rendered dynamically without repetition.
+
+Eg
+
+```
+//Cards.jsx
+function Cards(props) {
+    <h1>{props.name}</h1>
+    <img src={props.img} alt={props.alt}>
+}
+
+//Apps.jsx
+function App() {
+    <Cards name="Tony Stark" img="img/stark" alt="tony stark image" />
+    <Cards name="Steve Rogers" img="img/rogers" alt="steve roger image" />
+    <Cards name="Peter Parker" img="img/parker" alt="peter parker image">
+}
+```
+
+Here we have passed data using custom attributes to our custom component just similar to html attributes and through this same layout can be used without repetition.
+
+So, Props are the information that you pass to a JSX tag.
+
+> Note: We can pass props only to custom elements not HTML like elements. HTML like elements in JSX has predefined limited props for example: img element has predefined props like 'src' 'alt' 'className' 'height' 'width' etc.
