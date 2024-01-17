@@ -274,4 +274,8 @@ Here we have passed data using custom attributes to our custom component just si
 
 So, Props are the information that you pass to a JSX tag.
 
-> Note: We can pass props only to custom elements not HTML like elements. HTML like elements in JSX has predefined limited props for example: img element has predefined props like 'src' 'alt' 'className' 'height' 'width' etc.
+> [!NOTE]
+>
+> - We can pass props only to custom elements not HTML like elements. HTML like elements in JSX has predefined limited props for example: img element has predefined props like 'src' 'alt' 'className' 'height' 'width' etc.
+
+- Any JSX/HTML attributes passed inside component will be treated as props and hence will not have effect explicitly.
