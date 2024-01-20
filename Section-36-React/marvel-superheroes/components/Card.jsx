@@ -1,11 +1,12 @@
 import "../styles.css";
+import Avatar from "./Avatar.jsx";
 
 function Card(props) {
     return (
         <div className="cards">
             <div>
                 <h1>{props.name}</h1>
-                <img src={props.img} alt={props.text} className="profile-image"/>
+                <Avatar img={props.img} text={props.text} />
                 <p>{props.description}</p>
             </div>
         </div>
