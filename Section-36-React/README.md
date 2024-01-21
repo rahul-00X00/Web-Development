@@ -278,3 +278,42 @@ So, Props are the information that you pass to a JSX tag.
 >
 > - We can pass props only to custom elements not HTML like elements. HTML like elements in JSX has predefined limited props for example: img element has predefined props like 'src' 'alt' 'className' 'height' 'width' etc.
 > - Any JSX/HTML attributes passed inside component will be treated as props and hence will not have effect explicitly.
+
+## Javascript map()
+
+If we have to render same component for different data it would be tidious to use custom component for each varying data, Instead we would use map() function similar to loop that allows us to render same component multiple times for different data.
+
+Eg:
+
+```
+//Without using map function
+render(
+  <div>
+    <Text name="Tony" />
+    <Text name="Steve" />
+    <Text name="Peter" />
+  </div>
+)
+
+//With map function
+
+const nameList = [
+  {'name': 'Tony'},
+  {'name': 'Steve'},
+  {'name': 'Peter'}
+]; //Array of name objects
+
+function createText(textElement) {
+  return <Text name=textElement.name />
+}
+
+render(
+  <div>
+    {nameList.map(createText)} // This will loop through all elements in the array nameList
+  </div>
+)
+```
+
+> [!Note]
+> The map function works on javascript array and it expects callback function as a argument.
+> `[javascriptArray].map(callbackFunction)`
