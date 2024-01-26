@@ -348,3 +348,17 @@ doSomething() -> Output -> 4
 > [!Note]
 > Arrow function is extensively used as callback functions.
 > `setTimeout(() => {//do something}, 2000);`
+
+## Javascript Promise Function
+
+Javascript promise functions let's one to run javascript code asynchronously!
+
+But before that let's understand between Synchronous and Asynchronous
+
+### Synchronous Programming
+
+In this program gets executed in serial manner(One after another). Analogy there is single track and multiple sprinters running on same track one behind other!
+
+### Asynchronous Programming
+
+In this program gets executed in paralled manner(Independently). Analogy there is multiple tracks and sprinters running on different tracks independently.
