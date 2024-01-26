@@ -317,3 +317,34 @@ render(
 > [!Note]
 > The map function works on javascript array and it expects callback function as a argument.
 > `[javascriptArray].map(callbackFunction)`
+
+## Javascript Arrow Function
+
+An arrow function is similar to normal functions but more like anonymous functions,
+
+Below is the example of arrow function
+
+```
+let print = () => {
+  return "Hello World";
+}
+print(); //Output -> Hello World
+
+Alternatively if it is single line function we can directly write like this
+let print = () => "Hello World";
+print(); //Ouput -> Hello World
+
+Even we can have multi line functions
+let doSomething = () => {
+  var a = 2 + 2;
+  var b = a * a;
+  var c = b / a;
+  return c;
+}
+
+doSomething() -> Output -> 4
+```
+
+> [!Note]
+> Arrow function is extensively used as callback functions.
+> `setTimeout(() => {//do something}, 2000);`
