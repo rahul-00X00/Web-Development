@@ -1,44 +1,25 @@
-const emoji_data = [
-        {
-          "index": 1,
-          "emoji": "😀",
-          "name": "grinning face",
-          "slug": "grinning_face",
-          "group": "Smileys & Emotion",
-          "emoji_version": "1.0",
-          "unicode_version": "1.0",
-          "skin_tone_support": false
-        },
-        {
-          "index": 2,
-          "emoji": "😃",
-          "name": "grinning face with big eyes",
-          "slug": "grinning_face_with_big_eyes",
-          "group": "Smileys & Emotion",
-          "emoji_version": "0.6",
-          "unicode_version": "0.6",
-          "skin_tone_support": false
-        },
-         {
-          "index":3,
-          "emoji":"😄",
-          "name": "grinning face with smiling eyes",
-          "slug": "grinning_face_with_smiling_eyes",
-          "group": "Smileys & Emotion",
-          "emoji_version": "0.6",
-          "unicode_version": "0.6",
-          "skin_tone_support": false
-        },
-         {
-          "index": 4,
-          "emoji":"😁",
-          "name": "beaming face with smiling eyes",
-          "slug": "beaming_face_with_smiling_eyes",
-          "group": "Smileys & Emotion",
-          "emoji_version": "0.6",
-          "unicode_version": "0.6",
-          "skin_tone_support": false
-        },
-]
+const emojipedia = [
+  {
+    id: 1,
+    emoji: "💪",
+    name: "Tense Biceps",
+    meaning:
+      "“You can do that!” or “I feel strong!” Arm with tense biceps. Also used in connection with doing sports, e.g. at the gym."
+  },
+  {
+    id: 2,
+    emoji: "🙏",
+    name: "Person With Folded Hands",
+    meaning:
+      "Two hands pressed together. Is currently very introverted, saying a prayer, or hoping for enlightenment. Is also used as a “high five” or to say thank you."
+  },
+  {
+    id: 3,
+    emoji: "🤣",
+    name: "Rolling On The Floor, Laughing",
+    meaning:
+      "This is funny! A smiley face, rolling on the floor, laughing. The face is laughing boundlessly. The emoji version of “rofl“. Stands for „rolling on the floor, laughing“."
+  }
+];
 
-export default emoji_data;
+export default emojipedia;

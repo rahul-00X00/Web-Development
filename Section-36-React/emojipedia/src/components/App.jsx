@@ -1,12 +1,12 @@
 import Card from "./Card.jsx";
-import emoji_data from ".././emoji_data.js";
+import emojipedia from "../emoji_data.js";
 
 function createCard(emoji) {
     return <Card 
-        key={emoji.index}
+        key={emoji.id}
         img={emoji.emoji}
         text={emoji.name}
-        description={emoji.name}
+        description={emoji.meaning}
     />
 }
 
@@ -14,7 +14,7 @@ function App() {
     return (
         <div>
             <h1>Emoji List Rendered using React</h1>
-            {emoji_data.map(createCard)}
+            {emojipedia.map(createCard)}
         </div>
     )
 }

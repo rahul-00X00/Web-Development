@@ -1,10 +1,12 @@
 function Card(props) {
-    return (
-        <div>
-            <img src={props.img} alt={props.text} />
-            <span> {props.description}</span>
-        </div>
-    )
+  return (
+    <div>
+      <span role="img" aria-label={props.text}>
+        {props.img}
+      </span>
+      <span> {props.description}</span>
+    </div>
+  );
 }
 
 export default Card;
