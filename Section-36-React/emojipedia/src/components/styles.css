@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(164, 225, 240);
+}
+
+.heading {
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 3rem;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(4, 148, 148);
+    color: azure;
+}
+
+.card-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 18rem;
+    padding: 1rem 1rem;
+    align-items: center;
+    text-align: center;
+    background-color: azure;
+    box-shadow: 0 0 10px rgb(110, 102, 102);
+}
+
+.emoji-size {
+    font-size: 3rem;
+}
+
+.card > :nth-child(2) {
+    margin-top: 1.3rem;
+    color: rgb(22, 186, 207);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card > :nth-child(3) {
+    color: rgb(110, 102, 102);
+}
+
+@media (max-width: 500px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        
+    }
+}
