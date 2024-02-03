@@ -349,16 +349,52 @@ doSomething() -> Output -> 4
 > Arrow function is extensively used as callback functions.
 > `setTimeout(() => {//do something}, 2000);`
 
-## Javascript Promise Function
+## Javascript **forEach()** **map()** **filter()** **reduce()** methods
 
-Javascript promise functions let's one to run javascript code asynchronously!
+### Javascript `forEach()` method
 
-But before that let's understand between Synchronous and Asynchronous
+Using forEach() method we can loop through the javascript array and do something with it. It accepts callback function as argument(input)
 
-### Synchronous Programming
+```
+var numbers = [1,2,3,4];
+var doubleNumbers = [];
 
-In this program gets executed in serial manner(One after another). Analogy there is single track and multiple sprinters running on same track one behind other!
+numbers.forEach(function (number) {
+  doubleNumbers.push(number * 2);
+})
 
-### Asynchronous Programming
+console.log(numbers); // [1,2,3,4]
+console.log(doubleNumbers); // [2,4,6,8]
+```
 
-In this program gets executed in paralled manner(Independently). Analogy there is multiple tracks and sprinters running on different tracks independently.
+### Javascript `map()` method
+
+Using map() method we can loop through the javascript array and do something with it. It accepts a callback function as a argument(input) and it also accepts that callback function to return something.
+What makes it different from the forEach() method that it returns a new array
+
+```
+var numbers = [1,2,3,4];
+
+var tripleNumbers = numbers.map(function (number) {
+  // This function will return 3 times the number
+  return number * 3;
+})
+
+console.log(numbers); // [1,2,3,4]
+console.log(tripleNumbers); // [3,6,9,12]
+```
+
+### Javascript `filter()` method
+
+As the name suggest it would filter the given array and output the items in an array which returns true for a condition. It also accepts callback function as argument/input
+
+```
+var numbers = [2,10,45,3,20];
+
+var numbersGreaterThan10 = numbers.filter(function(num) {
+  return num > 10; // If num is greater than 10 that it would be returned
+})
+
+console.log(numbers); // [2,10,45,3,20]
+console.log(numbersGreaterThan10); // [45,20]
+```

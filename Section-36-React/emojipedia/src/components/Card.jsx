@@ -2,7 +2,7 @@ import "./styles.css";
 
 function Card(props) {
   return (
-    <div class="card">
+    <div className="card">
       <span role="img" aria-label={props.text} className="emoji-size">
         {props.img}
       </span>
