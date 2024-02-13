@@ -398,3 +398,25 @@ var numbersGreaterThan10 = numbers.filter(function(num) {
 console.log(numbers); // [2,10,45,3,20]
 console.log(numbersGreaterThan10); // [45,20]
 ```
+
+### Javascript `reduce()` method
+
+The reduce() method returns single integer output instead of an array. It accepts a callback function which has two arguments `accumulator`, `currentNumber`. So reduce() method accumulates a value by doing something to each element in an array.
+
+Ex;
+
+```
+// We want to sum all the numbers present inside a numberList array
+numberList = [2, 4, 6, 8, 10]
+
+sum_of = numberList.reduce(function(accumulator, currentNum) {
+    return accumulator + currentNum;
+})
+
+console.log(sum_of); // 30
+```
+
+> Couple of things to notice
+>
+> - reduce() method also takes intial value of accumulator as an argument. If not specified it takes first element of array as a value of accumulator
+> - We don't have to assign like this to accumulator += currentNum, each time we return it gets assigned to accumulator
