@@ -434,3 +434,17 @@ const num_greater_10 = numbers_list.find((num) => {
 
 console.log(num_greater_10); // 23
 ```
+
+### Javascript `findIndex()` method
+
+The findIndex() method works exactly like find() method but instead of returning an element from an array list it returns index of that element. So it returns the index of an first element of an array that returns true for specific condition. It accepts callback function as an argument.
+
+```
+numbers_list = [1, 5, 6, 10, 34];
+
+const num_greater_5 = numbers_list.findIndex((num) => {
+  return num > 5;
+})
+
+console.log(num_greater_5); // 2 (index of 6)
+```
