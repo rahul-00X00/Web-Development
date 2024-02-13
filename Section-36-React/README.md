@@ -420,3 +420,17 @@ console.log(sum_of); // 30
 >
 > - reduce() method also takes intial value of accumulator as an argument. If not specified it takes first element of array as a value of accumulator
 > - We don't have to assign like this to accumulator += currentNum, each time we return it gets assigned to accumulator
+
+### Javascript `find()` method
+
+The find() methods returns the first element of an array that returns true for specific condition. It accepts callback function as an argument.
+
+```
+numbers_list = [1, 5, 10, 4, 23];
+
+const num_greater_10 = numbers_list.find((num) => {
+  return num > 10;
+})
+
+console.log(num_greater_10); // 23
+```
