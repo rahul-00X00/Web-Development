@@ -38,3 +38,7 @@ footer {
 .note:hover {
     overflow: auto;
 }
+
+.card {
+    display: flex;
+}
