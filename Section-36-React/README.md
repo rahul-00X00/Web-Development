@@ -448,3 +448,105 @@ const num_greater_5 = numbers_list.findIndex((num) => {
 
 console.log(num_greater_5); // 2 (index of 6)
 ```
+
+## React Conditional Rendering with Ternary Operator and && Operator
+
+We can conditionally render different components, means if a particular condition is true we would render one component and if the condition is false we would render different component.
+
+### Conditional Rendering Using Ternary Operator
+
+`Syntax: expression[condition] ? expression[if condition is true] : expression[if condition is false]`
+
+```
+// Without Ternary Operator
+
+isUserLoggedIn = false;
+
+function checkIfUserLoggedIn() {
+  if (isUserLoggedIn) {
+    return (
+      <h1>Hello User</h1>
+    )
+  } else {
+    return (
+      <form>
+        <input type="email" placeholder="User Email"/>
+        <input type="password" placeholder="Password">
+        <button type="submit">Sign In</button>
+      </form>
+    )
+  }
+}
+
+
+function App() {
+  return (
+    <div>
+      {checkIfUserLoggedIn()}
+    </div>
+  )
+}
+```
+
+```
+// With Ternary Operator
+
+/*Form Component*/
+export default function Form (
+  return (
+    <div>
+      <form>
+        <input type="email" placeholder="User Email"/>
+        <input type="password" placeholder="User Password"/>
+        <button type="submit">Sign In</submit>
+      </form>
+    </div>
+  )
+)
+
+
+/*App Component*/
+import Form from "./Form";
+
+isUserLoggedIn = false;
+
+funtion App() {
+    return (
+      <div>
+        {isUserLoggedIn ? <Form> : <h1>Hello</h1>}
+      </div>
+    )
+}
+```
+
+### Conditional Rendering using && Operator
+
+Sometimes we have to render something if a condition is true and nothing if condition is false, it can be achieved through Ternary Operator however there is a shorter syntax through && Operator
+
+`Syntax: expression[conditon] && expression[if condition is true]`
+
+For example let say we want to show user to go to bed if it 10pm at night and nothing if it is not
+
+```
+time = new Date().getHours();
+
+// With using Ternary Operator
+
+function App () {
+  return (
+    <div>
+      {time >= 22 ? <h1>Go to bed</h1> : null}
+    </div>
+  )
+}
+
+// With using && Operator
+
+function App() {
+  return (
+    <div>
+      {time > 22 && <h1>Go to bed</h1>}
+    </div>
+  )
+}
+```
