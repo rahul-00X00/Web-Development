@@ -550,3 +550,32 @@ function App() {
   )
 }
 ```
+
+## State in React - Declarative vs Imperative Programming
+
+The user interface(UI) has to be dynamic based on user actions or some values change. For example, the background turns black when the user selects dark mode or on clicking the card it should expand the card with full content.
+
+Earlier with pure javascript through the event listener we change the element style or properties using DOM
+
+Code to increase a number using vanilla javascript
+
+```
+  <button>1</button>
+
+  // js
+  initial_num = 1;
+  document.querySelector('button').addEventListner('click', () => {
+    initial_num++;
+    this.innerHTML = initial_num;
+  });
+```
+
+The above code is imperative programming style, we are telling each every step to be performed.
+
+Now in React the UI depends on function of state
+
+> UI = func(state)
+
+When the state changes the UI changes automatically means the component is rerendered. The state can be javascript variable
+
+Simple Analogy: we see ice at -10 celsius and we see water at +60 celsius so based on state of temperature we see different form of water or UI
