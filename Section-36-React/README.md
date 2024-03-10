@@ -560,13 +560,14 @@ Earlier with pure javascript through the event listener we change the element st
 Code to increase a number using vanilla javascript
 
 ```
-  <button>1</button>
+  <h1>1</h1>
+  <button>+</button>
 
   // js
   initial_num = 1;
   document.querySelector('button').addEventListner('click', () => {
     initial_num++;
-    this.innerHTML = initial_num;
+    document.querySelector('h1').innerHTML = initial_num;
   });
 ```
 
@@ -579,3 +580,39 @@ Now in React the UI depends on function of state
 When the state changes the UI changes automatically means the component is rerendered. The state can be javascript variable
 
 Simple Analogy: we see ice at -10 celsius and we see water at +60 celsius so based on state of temperature we see different form of water or UI
+
+## React Hooks - useState()
+
+Now if we want to change UI based on some action or state change we have to re-render entire web-page this means every component present inside the page will be re-rendered and it was highly ineffective. But using react hooks we can change a particular component based on some action or state change
+
+UI can change based on states and it can be achieved using **useState()** hook.
+
+> [!Note]
+> One of the rule using useState() is that it should be added inside a functional component
+
+```
+function App() {
+  const [count, setCount] = useState(0);
+
+  function increase() {
+    setCount(count++);
+  }
+
+  function decrease() {
+    setCount(--count);
+  }
+
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={increase}>-</button>
+      <button onClick={decrease}>+</button>
+    </div>
+  )
+}
+```
+
+Now in above code we have couple of things to note
+
+- useState(0) -> we are setting a initial value of the state variable based on which our react component should be re-rendered it could be integer or string or any other primitive datatype
+- On console logging useState(0) we get array of length 2, First one is the initial value we set and second is the function bound to it - using this function we can change the state value
