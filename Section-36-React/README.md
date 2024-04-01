@@ -616,3 +616,65 @@ Now in above code we have couple of things to note
 
 - useState(0) -> we are setting a initial value of the state variable based on which our react component should be re-rendered it could be integer or string or any other primitive datatype
 - On console logging useState(0) we get array of length 2, First one is the initial value we set and second is the function bound to it - using this function we can change the state value
+
+## Javascript - Destructuring
+
+In the above example we have seen how while declaring useState() we used two variables `const [count, setCount] = useState(0)` so basically we are destucturing what useState() returns!
+
+Example:
+const animals = [
+{ name: "cat", sound: "meow"},
+{ name: "dog", sound: "woof" },
+];
+
+We have a complex data here! In real world this is how most of the response looks like when we use API's
+
+- const [cat, dog] = animals; // Here we are destructuring animals array which contains two objects to cat and dog constant simultaneously
+  If we print cat or dog we get this output {name: "cat", sound: "meow"}
+
+> [!Note]
+> While destructuring if right side is an array then we should use arrays to destructure it and if right side is an object then we should use object
+
+- We will further break down the cat object
+  const {name, sound} = cat;
+  console.log(name) -> cat
+  console.log(sound) -> meow
+
+> [!Note]
+> While destructuring the object we should use the exact key name the object has
+
+- Furthermore we can also specific keys from the object
+  const { sound } = cat;
+  console.log(sound) -> meow
+
+- If we want to change the name of the keys of the object then we have to follow the below approach
+  const {name: catName, sound: catSound} = cat;
+  console.log(name); // undefined
+  console.log(catName) -> cat
+  Here we have used colon and renamed with the user-defined name
+
+- Sometimes value for a particular object key exists and sometimes don't so we use default value when the value of particular key doesn't exists
+  const {name = "Kitty"} = cat // let's assume the cat object doesn't have name attribute
+  console.log(name) -> Kitty
+  Since the cat object doesn't had name attribute it defaulted to Kitty
+
+- Often times when we destructure an item then the destructured item might be an complex data type like array or object
+  const animals = [
+    {
+      sound: "meow",
+      feedingRequirements: {
+        food: 2,
+        water: 3,
+      },
+    }
+  ];
+  One approach is:
+
+  1. [ cat ] = animals
+     { feedingRequirements } = cat
+     { food, water } = feedingRequirements
+
+
+      OR
+
+  2. [feedingRequirements: {food, water}] = cat;
